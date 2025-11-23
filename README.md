@@ -36,7 +36,7 @@ src/
 ├── utils/               # Logique métier pure
 │   ├── boardOperations.ts  # Opérations sur le plateau
 │   ├── winDetection.ts     # Détection de victoire
-│   └── computerMove.ts     # Logique de l'IA
+│   └── computerMove.ts     # Logique de l'ordinateur
 ├── types/               # Définitions TypeScript
 │   └── game.ts          # Types du jeu
 ├── config/              # Configuration centralisée
@@ -55,6 +55,6 @@ src/
 ## Fonctionnalités
 
 - Choix du pion (X ou O)
-- IA avec placement aléatoire
+- Ordinateur avec placement aléatoire
 - Détection de victoire/match nul
 
