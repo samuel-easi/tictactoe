@@ -62,20 +62,16 @@ function handleRestart() {
 
 <template>
   <div class="min-h-screen bg-easi-bg flex flex-col items-center justify-center p-8">
-    <button
-      @click="emit('backToSelection')"
-      class="absolute top-4 left-4 px-4 py-2 bg-easi-secondary text-easi-text rounded-lg hover:opacity-80 transition-opacity"
-    >
+    <button @click="emit('backToSelection')"
+      class="absolute top-4 left-4 px-4 py-2 bg-easi-secondary text-easi-text rounded-lg hover:opacity-80 transition-opacity">
       ← Changer de pion
     </button>
 
     <WinnerDisplay :winnerPiece="gameStore.winnerPiece" :isDraw="gameStore.isDraw" />
 
-    <GameGrid
-      :board="gameStore.board"
+    <GameGrid :board="gameStore.board"
       :disabled="gameStore.isGameOver || gameStore.currentPiece !== gameStore.humanPiece"
-      @cellClick="handleCellClick"
-    />
+      @cellClick="handleCellClick" />
 
     <div v-if="gameStore.isGameOver" class="mt-8">
       <RestartButton @restart="handleRestart" />

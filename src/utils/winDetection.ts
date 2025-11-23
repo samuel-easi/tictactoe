@@ -1,4 +1,4 @@
-import type { Piece, Board, CellPosition } from "../types/game";
+import type { Piece, Board } from "../types/game";
 
 export function checkWinner(board: Board, winLength: number): Piece | null {
   const size = board.length;

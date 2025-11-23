@@ -21,15 +21,8 @@ function handleCellClick(row: number, col: number) {
 <template>
   <div class="grid gap-0" :style="{ gridTemplateColumns: `repeat(${board.length}, minmax(0, 1fr))` }">
     <template v-for="(row, rowIndex) in board" :key="rowIndex">
-      <GridCell
-        v-for="(cell, colIndex) in row"
-        :key="`${rowIndex}-${colIndex}`"
-        :piece="cell"
-        :row="rowIndex"
-        :col="colIndex"
-        :disabled="disabled"
-        @click="handleCellClick"
-      />
+      <GridCell v-for="(cell, colIndex) in row" :key="`${rowIndex}-${colIndex}`" :piece="cell" :row="rowIndex"
+        :col="colIndex" :disabled="disabled" @click="handleCellClick" />
     </template>
   </div>
 </template>

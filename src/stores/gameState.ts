@@ -1,9 +1,9 @@
-import { defineStore } from 'pinia';
-import type { Piece } from '../types/game';
-import { createEmptyBoard } from '../utils/boardOperations';
-import { DEFAULT_GRID_SIZE } from '../config/gameConfig';
+import { defineStore } from "pinia";
+import type { Piece } from "../types/game";
+import { createEmptyBoard } from "../utils/boardOperations";
+import { DEFAULT_GRID_SIZE } from "../config/gameConfig";
 
-export const useGameStore = defineStore('game', {
+export const useGameStore = defineStore("game", {
   state: () => ({
     board: createEmptyBoard(DEFAULT_GRID_SIZE) as Piece[][],
     currentPiece: null as Piece,
@@ -11,13 +11,13 @@ export const useGameStore = defineStore('game', {
     computerPiece: null as Piece,
     winnerPiece: null as Piece,
     isDraw: false,
-    isGameOver: false
+    isGameOver: false,
   }),
 
   actions: {
     initializeGame(humanPiece: Piece) {
       this.humanPiece = humanPiece;
-      this.computerPiece = humanPiece === 'X' ? 'O' : 'X';
+      this.computerPiece = humanPiece === "X" ? "O" : "X";
       this.board = createEmptyBoard(DEFAULT_GRID_SIZE);
       this.currentPiece = humanPiece;
       this.winnerPiece = null;
@@ -48,7 +48,7 @@ export const useGameStore = defineStore('game', {
     },
 
     switchPlayer() {
-      this.currentPiece = this.currentPiece === 'X' ? 'O' : 'X';
-    }
-  }
+      this.currentPiece = this.currentPiece === "X" ? "O" : "X";
+    },
+  },
 });

@@ -1,4 +1,4 @@
-import type { Piece, Board, CellPosition } from '../types/game';
+import type { Piece, Board, CellPosition } from "../types/game";
 
 export function createEmptyBoard(size: number): Board {
   const board: Board = [];
