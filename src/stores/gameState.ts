@@ -1,11 +1,11 @@
 import { defineStore } from "pinia";
-import type { Piece } from "../types/game";
+import type { Piece, Board } from "../types/game";
 import { createEmptyBoard } from "../utils/boardOperations";
 import { DEFAULT_GRID_SIZE } from "../config/gameConfig";
 
 export const useGameStore = defineStore("game", {
   state: () => ({
-    board: createEmptyBoard(DEFAULT_GRID_SIZE) as Piece[][],
+    board: createEmptyBoard(DEFAULT_GRID_SIZE) as Board,
     currentPiece: null as Piece,
     humanPiece: null as Piece,
     computerPiece: null as Piece,

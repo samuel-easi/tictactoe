@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { Piece } from '../types/game';
+import type { Board } from '../types/game';
 import GridCell from './GridCell.vue';
 
 interface Props {
-  board: Piece[][];
+  board: Board;
   disabled: boolean;
 }
 
